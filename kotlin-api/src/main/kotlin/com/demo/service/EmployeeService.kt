@@ -10,16 +10,10 @@ class EmployeeService @Autowired constructor(val employeeRepository: EmployeeRep
 
     val mapper = ObjectMapper()
 
-    fun getEmployee(employeeId:Long):String{
-        return mapper.writeValueAsString(employeeRepository.findById(employeeId).get())
-    }
+    fun getEmployee(employeeId:Long):String = mapper.writeValueAsString(employeeRepository.findById(employeeId).get())
 
-    fun getEmployeeByName(employeeName:String):String{
-        return mapper.writeValueAsString(employeeRepository.findByEmployeeName(employeeName))
-    }
+    fun getEmployeeByName(employeeName:String):String = mapper.writeValueAsString(employeeRepository.findByEmployeeName(employeeName))
 
-    fun getAllEmployees():String{
-        return mapper.writeValueAsString(employeeRepository.findAll())
-    }
+    fun getAllEmployees():String = mapper.writeValueAsString(employeeRepository.findAll())
 
 }
