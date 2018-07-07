@@ -1,0 +1,5 @@
+rootProject.name = 'kotlin-service'
+include 'kotlin-dao'
+include 'kotlin-common'
+include 'kotlin-api'
+
